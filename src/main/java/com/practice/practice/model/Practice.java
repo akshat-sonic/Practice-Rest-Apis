@@ -4,6 +4,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name="practice")
@@ -20,19 +21,20 @@ public class Practice {
     private String flowName;
 
     @Column(name="down_from")
-    private String downFrom;
+    private LocalDateTime downFrom;
 
     @Column(name="down_to") 
-    private String downTo;
+    private LocalDateTime downTo;
 
     public Practice() {
     }
 
-    public Practice(String provider, String flowName, String downFrom, String downTo) {
+    public Practice(String provider, String flowName,LocalDateTime downFrom,LocalDateTime downTo) {
         this.provider = provider;
         this.flowName = flowName;
         this.downFrom = downFrom;
         this.downTo = downTo;
+//        System.out.println(this.downFrom);
     }
 
     public long getId() {
@@ -62,19 +64,19 @@ public class Practice {
     }
 
 
-    public String getDownFrom() {
+    public LocalDateTime getDownFrom() {
         return downFrom;
     }
 
-    public void setDownFrom(String downFrom) {
+    public void setDownFrom(LocalDateTime downFrom) {
         this.downFrom = downFrom;
     }
 
-    public String getDownTo() {
+    public LocalDateTime getDownTo() {
         return downTo;
     }
 
-    public void setDownTo(String downTo) {
+    public void setDownTo(LocalDateTime downTo) {
         this.downTo = downTo;
     }
 }
