@@ -26,6 +26,9 @@ public class PracticeController {
     @GetMapping("/practice/{id}")
     public ResponseEntity<Practice> getPracticeById(@PathVariable(value = "id") Long practiceId)
             throws ResourceNotFoundException {
+        /*
+         * Please try and wrap lines to make sure it fits in a screen for ease in readability
+         */
         Practice practice = practiceRepository.findById(practiceId).orElseThrow(() -> new ResourceNotFoundException("Provider not found for this id - " + practiceId));
         return ResponseEntity.ok().body(practice);
     }
