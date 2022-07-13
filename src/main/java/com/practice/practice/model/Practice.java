@@ -6,6 +6,12 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
+/*
+ * Please use
+ * @Getter
+ * @Setter
+ * And avoid as much bolierplate as you can
+ */
 @Entity
 @Table(name="practice")
 public class Practice {
