@@ -1,5 +1,9 @@
 package com.practice.practice.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -12,6 +16,10 @@ import java.time.LocalDateTime;
  * @Setter
  * And avoid as much bolierplate as you can
  */
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="practice")
 public class Practice {
@@ -32,57 +40,57 @@ public class Practice {
     @Column(name="down_to") 
     private LocalDateTime downTo;
 
-    public Practice() {
-    }
-
-    public Practice(String provider, String flowName,LocalDateTime downFrom,LocalDateTime downTo) {
-        this.provider = provider;
-        this.flowName = flowName;
-        this.downFrom = downFrom;
-        this.downTo = downTo;
-//        System.out.println(this.downFrom);
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-
-    public String getProvider() {
-        return provider;
-    }
-
-    public void setProvider(String provider) {
-        this.provider = provider;
-    }
-
-
-    public String getFlowName() {
-        return flowName;
-    }
-
-    public void setFlowName(String flowName) {
-        this.flowName = flowName;
-    }
-
-
-    public LocalDateTime getDownFrom() {
-        return downFrom;
-    }
-
-    public void setDownFrom(LocalDateTime downFrom) {
-        this.downFrom = downFrom;
-    }
-
-    public LocalDateTime getDownTo() {
-        return downTo;
-    }
-
-    public void setDownTo(LocalDateTime downTo) {
-        this.downTo = downTo;
-    }
+//    public Practice() {
+//    }
+//
+//    public Practice(String provider, String flowName,LocalDateTime downFrom,LocalDateTime downTo) {
+//        this.provider = provider;
+//        this.flowName = flowName;
+//        this.downFrom = downFrom;
+//        this.downTo = downTo;
+////        System.out.println(this.downFrom);
+//    }
+//
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
+//
+//
+//    public String getProvider() {
+//        return provider;
+//    }
+//
+//    public void setProvider(String provider) {
+//        this.provider = provider;
+//    }
+//
+//
+//    public String getFlowName() {
+//        return flowName;
+//    }
+//
+//    public void setFlowName(String flowName) {
+//        this.flowName = flowName;
+//    }
+//
+//
+//    public LocalDateTime getDownFrom() {
+//        return downFrom;
+//    }
+//
+//    public void setDownFrom(LocalDateTime downFrom) {
+//        this.downFrom = downFrom;
+//    }
+//
+//    public LocalDateTime getDownTo() {
+//        return downTo;
+//    }
+//
+//    public void setDownTo(LocalDateTime downTo) {
+//        this.downTo = downTo;
+//    }
 }
